@@ -28,30 +28,37 @@ def recipe(name, &block)
   Recipe.new(name, &block)
 end
 
-Recipe.describe do
-  recipe 'Hot Cake' do
-    ingredient 'Egg'
-    ingredient 'Flour'
-    ingredient 'Water'
-    ingredient 'Sugar'
-  end
+# Write a Recipe class in pure Ruby (no database, and no gems apart from a test library) which will make the code below work
+# The usage of the class should be exactly the same as the snippet
+# Please also write suitable tests. We use RSpec, but you can use any library you like
+# Feel free to include comments to explain the intention behind what you're doing.
 
-  recipe 'Miso Soup' do
-    ingredient 'Tofu'
-    ingredient 'Green Chard'
-    ingredient 'Green Onion'
-    ingredient 'White miso paste'
-  end
-end
+# Code:
 
-hotcake = Recipe.for('Hot Cake')
-puts hotcake.name
-# => Hot Cake
-puts hotcake.ingredients.inspect
-# => ["Egg", "Flour", "Water", "Sugar"]
+# Recipe.describe do
+#   recipe 'Hot Cake' do
+#     ingredient 'Egg'
+#     ingredient 'Flour'
+#     ingredient 'Water'
+#     ingredient 'Sugar'
+#   end
 
-soup = Recipe.for('Miso Soup')
-puts soup.name
-# # # => Miso Soup
-puts soup.ingredients.inspect
+#   recipe 'Miso Soup' do
+#     ingredient 'Tofu'
+#     ingredient 'Green Chard'
+#     ingredient 'Green Onion'
+#     ingredient 'White miso paste'
+#   end
+# end
+
+# hotcake = Recipe.for('Hot Cake')
+# puts hotcake.name
+# # => Hot Cake
+# puts hotcake.ingredients.inspect
+# # => ["Egg", "Flour", "Water", "Sugar"]
+
+# soup = Recipe.for('Miso Soup')
+# puts soup.name
+# # => Miso Soup
+# puts soup.ingredients.inspect
 # # => ["Tofu", "Green Chard", "Green Onion", "White miso paste"]
